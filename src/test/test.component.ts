@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
     selector:'app-test',
     template:`<h1> Welcome </h1>
     <h1> Hi </h1>
+    {{ title }}
     `,
     styleUrls:['./test.component.css']
 })
-export class TestComponent {}
+export class TestComponent {
+
+    title:string="zensar"
+}
