@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from 'src/test/test.component';
 import { HomeComponent } from './home/home.component';
-import {FormsModule} from '@angular/forms'; // Used for Two way data binding 
+import {FormsModule} from '@angular/forms';
+import { MyPipe } from './my.pipe'; // Used for Two way data binding 
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    HomeComponent
+    HomeComponent,
+    MyPipe
   ],
   imports: [
     BrowserModule,

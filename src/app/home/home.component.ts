@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       "employeeName":"Laxman",
       "employeeSalary":100
     }
-  ];         // any used if you don't know the type of variable
+  ];         // any -  used if you don't know the type of variable
 
 
   constructor() { }
