@@ -1,0 +1,22 @@
+<p>home works!</p>
+
+<!--Function call-->
+<button type="button" (click)="myFunction()">Click Me!</button>
+
+<!--Two Data Binding  [(ngModel)]-->
+<input type="text" [(ngModel)]="myProp" />
+{{myProp}}
+<br/><br/><br/><br/>
+
+<!--Empolyee Id : {{employee.employeeId}}
+Empolyee Name : {{employee.employeeName}}
+Empolyee Salary : {{employee.employeeSalary}}
+-->
+<ul>
+    <li *ngFor="let employee of employees">
+        {{employee.employeeId}}
+        {{employee.employeeName}}
+        {{employee.employeeSalary}}
+    </li>
+</ul>
+
