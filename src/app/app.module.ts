@@ -7,6 +7,8 @@ import { TestComponent } from 'src/test/test.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { MyPipe } from './my.pipe'; // Used for Two way data binding 
+import { HrModule } from './hr/hr.module';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +20,12 @@ import { MyPipe } from './my.pipe'; // Used for Two way data binding
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HrModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+//imported HrModule its feature module
 export class AppModule { }
