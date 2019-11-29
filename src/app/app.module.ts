@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { MyPipe } from './my.pipe'; // Used for Two way data binding 
 import { HrModule } from './hr/hr.module';
+import { ProductModule } from './product/product.module';
+import { MyproductService } from './myproduct.service';
 
 
 @NgModule({
@@ -21,9 +23,10 @@ import { HrModule } from './hr/hr.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HrModule
+    HrModule,
+    ProductModule
   ],
-  providers: [],
+  providers: [MyproductService],
   bootstrap: [AppComponent]
 })
 

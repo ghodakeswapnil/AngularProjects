@@ -1,0 +1,32 @@
+<h1>Product Management</h1>
+<body>
+
+<button type="button" name="btnShow" id="btnShow" (click)="handleClick()">Show</button>
+
+<table>
+    <thead>        
+        <tr>
+            <td *ngIf=myProp>ProductImage</td>            
+            <td>ProductId</td>
+            <td>ProductName</td>
+            <td>ProductCode</td>
+            <td>ReleaseDate</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>StartRating</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">               
+            <td *ngIf=myProp><img height="42" width="42" src='{{ product.imageUrl }}'></td>            
+            <td>{{ product.productId }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.productCode }}</td>
+            <td>{{ product.releaseDate }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.starRating }}</td>
+        </tr>
+    </tbody>
+</table>
+</body>
