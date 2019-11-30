@@ -10,6 +10,7 @@ import { MyPipe } from './my.pipe'; // Used for Two way data binding
 import { HrModule } from './hr/hr.module';
 import { ProductModule } from './product/product.module';
 import { MyproductService } from './myproduct.service';
+import { HttpClientModule } from '@angular/common/http';  // Used for RestService consumption. You can call endpoints
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MyproductService } from './myproduct.service';
     AppRoutingModule,
     FormsModule,
     HrModule,
-    ProductModule
+    ProductModule,
+    HttpClientModule
   ],
   providers: [MyproductService],
   bootstrap: [AppComponent]

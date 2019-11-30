@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MyproductService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getAllProducts() {
+    return this.http.get('/assets/data/product.json');  // Endpoint url of rest services comes here
 
-    return [
+    /*return [
       {
           "productId": 1,
           "productName": "Leaf Rake",
@@ -62,7 +64,7 @@ export class MyproductService {
         "imageUrl": "https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/06/480x240/54cfd423c3fde_-_laptop-joysticks-01-1012-lgn.jpg?resize=980:*"
       }
     ];
-
+    */
   }
 
 }

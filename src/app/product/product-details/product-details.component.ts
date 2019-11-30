@@ -7,20 +7,24 @@ import { MyproductService } from 'src/app/myproduct.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  products:any[];
+  //products:any[];
+  products:any;
 
   myProp:boolean = false;
   
   constructor(public ps:MyproductService) { }
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.products=this.ps.getAllProducts();
+  }*/
+  ngOnInit() {
+    this.products=this.ps.getAllProducts().subscribe(data=>this.products=data);  // YOu need to subscribe as product returning observable
   }
 
   handleClick(event: Event) {
     
     //this.myProp=true;
-    console.log('Click!', event)
+    
 
     if (this.myProp==false) {
       this.myProp = true;
